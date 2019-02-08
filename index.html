@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>utpadok</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="classic/jquery.mobile.theme-1.4.5.css" rel="stylesheet">
+<link href="classic/jquery.mobile.icons-1.4.5.min.css" rel="stylesheet">
+<link href="jquery.mobile.structure-1.4.5.min.css" rel="stylesheet">
+<link href="utpadok_mobile.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script>
+$(document).on("mobileinit", function()
+{
+   $.mobile.ajaxEnabled = false;
+});
+</script>
+<script src="jquery.mobile-1.4.5.min.js"></script>
+<script>
+function ValidateForm1()
+{
+   var regexp;
+   var Editbox1 = document.getElementById('Editbox1');
+   if (!(Editbox1.disabled || Editbox1.style.display === 'none' || Editbox1.style.visibility === 'hidden'))
+   {
+      regexp = /^[0-9-]*$/;
+      if (Editbox1.value.length != 0 && !regexp.test(Editbox1.value))
+      {
+         alert("দয়া করে সংখ্যা ইনপুট দিন ");
+         Editbox1.focus();
+         return false;
+      }
+   }
+   return true;
+}
+</script>
+<script src="dsmath.js"></script>
+<script src="script.js"></script>
+</head>
+<body>
+<div data-role="page" data-theme="u" data-title="utpadok" id="index">
+<div data-role="header" data-theme="u" id="Header1">
+<h1>উৎপাদক</h1>
+</div>
+<div class="ui-content" role="main">
+<div id="wb_Form1" style="">
+<form name="Form1" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSfUgZaVpSCiLnNs7qY1twRfC9ujph7ne9OW4RmiXMg-Sb8l3A/formResponse" enctype="multipart/form-data" target="InlineFrame1" data-ajax="false" data-transition="pop" id="Form1" style="display:inline;" onsubmit="return ValidateForm1()">
+<label for="Editbox1">এখানে সংখ্যা দিন- </label>
+<input type="text" id="Editbox1" style="" name="entry.396734522" value="" autocomplete="off" spellcheck="false">
+<input type="submit" data-inline="true" data-theme="u" id="Button1" name="" value="ক্লিক করুন">
+<div id="wb_Text2" name="entry.80591863">
+&nbsp;
+</div>
+</form>
+</div>
+<iframe name="InlineFrame1" id="InlineFrame1" style="display:none;" src=""></iframe>
+
+<div id="wb_Text1">
+<span style="color:#006400;font-family:Verdana;font-size:13px;">Developer:</span><span style="color:#000000;font-family:Verdana;font-size:13px;"> Debayan Sen<br></span><span style="color:#006400;font-family:Verdana;font-size:13px;">Year:</span><span style="color:#000000;font-family:Verdana;font-size:13px;"> 2019<br></span><span style="color:#006400;font-family:Verdana;font-size:13px;">Version:</span><span style="color:#000000;font-family:Verdana;font-size:13px;"> 1.0.0<br></span><span style="color:#006400;font-family:Verdana;font-size:13px;">Contact:</span><span style="color:#000000;font-family:Verdana;font-size:13px;"> debayan9@rediffmail.com</span>
+</div>
+</div>
+</div>
+</body>
+</html>
